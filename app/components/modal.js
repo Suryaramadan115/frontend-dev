@@ -44,7 +44,7 @@ export default function Bodal({data,counter}) {
             }
 
           useEffect(()=>{
-            const scriptsrc = "https://app.sandbox.midtrans.com/snap/snap.js"
+            const scriptsrc = "https://app.midtrans.com/snap/snap.js"
             const script = document.createElement("script");
             script.src = scriptsrc
             script.setAttribute("data-client-key",process.env.NEXT_PUBLIC_CLIENT)
