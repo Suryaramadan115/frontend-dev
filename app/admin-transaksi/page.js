@@ -30,8 +30,6 @@ export default function Admin() {
 
             const getproduct = async()=>{
                  const res = await axios.get(`https://apistore3000.vercel.app/transaksi`,{cache:"no-store"})
-
-             
                 setProduct(res.data.data)
          
             }
@@ -59,11 +57,11 @@ export default function Admin() {
                     getcountcustomer()
                     getcountproduct()
                     getcounttransaksi()
-                    if (status === 'unauthenticated')router.replace('/login')
+                    if (status === 'unauthenticated') router.replace('/login')
 
                    
 
-},[status])
+},[status,router])
 
 
 

@@ -6,7 +6,7 @@ import axios from "axios"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-export default function singleProduct({params:{id}}) {
+export default function SingleProduct({params:{id}}) {
   const [data,setdata] = useState([])
   const [datacategory,setdatacategory] = useState([])
   const [counter,setcounter] = useState(1)
@@ -36,7 +36,7 @@ export default function singleProduct({params:{id}}) {
   
     getcategory()
       getdata()
-  },[datacategory])
+  },[getcategory,getdata])
   return (
     <div>
         <div className=' min-h-full container mx-auto  flex     lg:flex-row  flex-col justify-center gap-x-[40]'>
@@ -65,7 +65,7 @@ export default function singleProduct({params:{id}}) {
 
           {datacategory.map((data)=>{
             return (
-              <div className="card w-[300px] bg-base-100 shadow-xl">
+              <div className="card w-[300px] bg-base-100 shadow-xl" key={data.id}>
               <figure className="px-10 pt-10">
                 <img src={data.url} alt="Shoes" className="rounded-xl h-[200px]" />
               </figure>

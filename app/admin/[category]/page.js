@@ -9,7 +9,6 @@ import { AiOutlineTransaction } from "react-icons/ai";
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 import { FaSearch } from "react-icons/fa";
-import ReactPaginate from 'react-paginate';
 import Addadmin from '../../components/(admin)/addadmin';
 import Editadmin from '../../components/(admin)/editadmin';
 import Deleteadmin from '../../components/(admin)/deleteadmin';
@@ -27,7 +26,6 @@ export default function Admincategory({params:{category}}) {
         const [counttransaksi,setcounttransaksi] = useState(0)
         const [countcustomer,setcountcustomer] = useState(0)
         const [limit,setlimit] = useState(10)
-        const [search,setsearch] = useState("")
 
 
             const getproduct = async()=>{
@@ -60,9 +58,7 @@ export default function Admincategory({params:{category}}) {
                     if (status === 'unauthenticated')router.replace('/login')
 
 
-},[status])
-
-
+},[status,getproduct,router])
 
   return (
     <div className='min-h-screen z-50 w-full bg-zinc-300 absolute top-0'>

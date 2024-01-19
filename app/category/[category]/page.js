@@ -22,7 +22,7 @@ export default function  Category({params:{category}}) {
 
     }
     useEffect(()=>{
-            getdata(data)
+            getdata()
     },[])
   return (
     <div className="min-h-screen container mx-auto flex flex-row gap-x-28">

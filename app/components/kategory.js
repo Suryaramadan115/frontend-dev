@@ -75,7 +75,7 @@ export default function Kategory() {
 
                 {diskon.map((data)=>{
                     return (
-                        <div>
+                        <div key={data.id}>
             <div className="card card-compact w-[120px] h-[300px]  lg:h-[400px]  lg:w-[180px] bg-base-100 shadow-xl" key={data.id}  >
                 <figure><img src={data.url} className='object-contain lg:h-[300px] h-[200px]'  alt="Shoes" /></figure>
                 <div className="card-body">

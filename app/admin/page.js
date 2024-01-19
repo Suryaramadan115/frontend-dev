@@ -49,7 +49,7 @@ export default function Admin() {
             
             const getproduct = async()=>{
                  const res = await axios.get(`https://apistore3000.vercel.app/product?search=${query}&limit=${limit}&page=${page}`,{cache:"no-store"})
-                 
+                 setProduct(res.data.data)
 
                 setlimit(res.data.limit)
                 setpage(res.data.page)
@@ -92,7 +92,7 @@ export default function Admin() {
                     if (status === 'unauthenticated')router.replace('/login')
 
 
-},[query,page,status])
+},[query,page,status,getproduct,router])
 
 
 

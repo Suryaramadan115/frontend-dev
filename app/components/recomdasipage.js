@@ -23,7 +23,7 @@ export default function Recomended() {
                 
   useEffect(()=>{
         getdata()
-  },[search])
+  },[search,getdata])
   return (
     <div className='min-h-screen container mt-[400px]  lg:mt-[200px] mx-auto'>
     
