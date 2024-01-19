@@ -70,7 +70,7 @@ export default function  Product() {
       <div className="  pl-2 pt-3 lg:pl-0 lg:pt-3  w-[400px] lg:w-[800px] flex flex-wrap gap-2  lg:justify-center lg:gap-5 mt-8">
       {data.map((data)=>{
         return (
-          <div className="  card lg:w-[250px] w-[110px] bg-base-100 shadow-xl h-[350px] lg:h-[500px]"  key={data.id}>
+          <div className="  card lg:w-[250px] w-[90px] bg-base-100 shadow-xl h-[350px] lg:h-[500px]"  key={data.id}>
           <figure className="">
             <img src={data.url} alt="Shoes" className=" object-contain rounded-xl h-[150px] lg:h-[250px] w-full" />
           </figure>
@@ -78,7 +78,7 @@ export default function  Product() {
             <h2 className="card-title text-xs lg:text-sm">Rp.{data.hargatotal}</h2>
             <p className="font-rubik font-semibold lg:text-lg text-xs capitalize text-center">{data.namaproduct}</p>
             <p className="lg:text-lg text-xs font-nunito text-blue-700 text-center capitalize">{data.category}</p>
-            <div className=" w-[100px] flex flex-row justify-between lg:w-full ">
+            <div className=" w-[80px] flex flex-row justify-between lg:w-full ">
             <p className="  lg:text-lg text-xs font-mono text-slate-600 font-extrabold ">Stok:{data.stok}</p>
             <FaCartShopping
             onClick={()=>{ dispatch(addid(data)) ; dispatch(addvalue(1)) }}
@@ -87,7 +87,7 @@ export default function  Product() {
             </div>
 
             <div className="card-actions">
-            <Link href={`/product/${data.id}`} className=" capitalize btn btn-primary text-white hover:text-yellow-700 hover:text-bold cursor-pointer">checkout </Link>
+            <Link href={`/product/${data.id}`} className=" w-[80px] lg:w-full capitalize btn btn-primary text-white hover:text-yellow-700 hover:text-bold cursor-pointer">checkout </Link>
               </div>
           </div>
       </div>   

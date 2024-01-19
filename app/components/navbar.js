@@ -104,7 +104,7 @@ export default function Navbar() {
         <FaCartShopping 
                 onClick={opendata}
                 className=' inline-block lg:scale-150 hover:text-blue-700 cursor-pointer text-yellow-500'/>
-                <h1 className="absolute lg:top-[40px] lg:right-[25px] top-[60px] right-[22px] "> {shop} </h1>
+                <h1 className="absolute lg:top-[40px] lg:right-[25px] top-[40px] right-0 "> {shop} </h1>
 
          </div>
 

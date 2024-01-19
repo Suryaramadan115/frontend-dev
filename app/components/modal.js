@@ -68,7 +68,7 @@ export default function Bodal({data,counter}) {
             </button>
         </div>
         <div className={open? "modal modal-open modal-middle overflow-auto " : "modal"}>
-            <div className=" relative overflow-auto w-[400px] lg:w-[600px] h-[660px] bg-white  rounded-2xl opacity-95 ">
+            <div className=" relative overflow-auto w-[300px] lg:w-[600px] h-[660px] bg-white  rounded-2xl opacity-95 ">
             <h1 className="text-2xl pt-5 text-center capitalize font-rubik">costumer details</h1>
                 <button onClick={changeOpen} className="absolute top-0 right-0 btn btn-ghost font-rubik text-3xl text-red-600">x</button>
             <form  className=" p-4 overflow-auto" onSubmit={submitPayment}>
