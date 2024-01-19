@@ -33,7 +33,7 @@ export default function Addadmin() {
                e.preventDefault()
 
             try {
-                const res = await axios.post('http://localhost:5000/product',{
+                const res = await axios.post('https://apistore3000.vercel.app/product',{
                       namaproduct : namaproduct,
                       category :category,
                       hargaawal : Number(hargaawal),

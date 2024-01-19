@@ -5,12 +5,12 @@ import React, { useEffect, useState } from 'react'
 import logo from "../../public/logo1.svg"
 import { CiSearch } from "react-icons/ci";
 import { FaCartShopping } from "react-icons/fa6";
-import { RxAvatar } from "react-icons/rx";
-import Link from 'next/link';
 import { addsearch,addkategori } from '@/redux/sliceredux';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useRef } from 'react';
+import Link from "next/link"
+
 
 
 export default function Navbar() {
@@ -32,7 +32,6 @@ export default function Navbar() {
 
     const shop = useSelector((state)=> state.product.value)
     const product = useSelector((state)=> state.product.id)
-    console.log(product)
 
       
 

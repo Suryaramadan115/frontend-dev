@@ -14,7 +14,7 @@ export default function Recomended() {
   console.log(search)
 
     const getdata=async ()=>{
-     const res  = await axios.get(`http://localhost:5000/product?search=${search}`,{cache:"no-store"}).then((res)=>{
+     const res  = await axios.get(`https://apistore3000.vercel.app/product?search=${search}`,{cache:"no-store"}).then((res)=>{
 
        setdata(res.data.data)
      })

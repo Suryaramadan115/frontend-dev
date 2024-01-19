@@ -23,7 +23,7 @@ export default function  Product() {
     const [totalrow,settotalrow] = useState(null)
     const search = useSelector((state)=> state.product.search)
     const getdata = async()=>{
-        const res = await axios.get(`http://localhost:5000/product?search=${search}&page=${page}&limit=${limit}`)
+        const res = await axios.get(`https://apistore3000.vercel.app/product?search=${search}&page=${page}&limit=${limit}`)
         setData(res.data.data)
         setpages(res.data.totalpage)
         settotalrow(res.data.totalrow)

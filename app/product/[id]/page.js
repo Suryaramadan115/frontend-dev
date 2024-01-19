@@ -1,5 +1,6 @@
 "use client"
 
+import Bodal from "@/app/components/modal"
 import Modal from "@/app/components/modal"
 import axios from "axios"
 import Link from "next/link"
@@ -10,7 +11,7 @@ export default function singleProduct({params:{id}}) {
   const [datacategory,setdatacategory] = useState([])
   const [counter,setcounter] = useState(1)
   const getdata=async()=>{
-  const   res = await axios.get(`http://localhost:5000/product/${id}`,{cache:"no-store"})
+  const   res = await axios.get(`https://apistore3000.vercel.app/product/${id}`)
   setdata(res.data.data)
 
   }
@@ -22,7 +23,7 @@ export default function singleProduct({params:{id}}) {
   }
 
   const getcategory = async()=>{
-    const res = await axios.get(`http://localhost:5000/category/${data.category}`,{cache:"no-store"})
+    const res = await axios.get(`https://apistore3000.vercel.app/category/${data.category}`,{cache:"no-store"})
     setdatacategory(res.data.data)
 
   
@@ -35,9 +36,7 @@ export default function singleProduct({params:{id}}) {
   
     getcategory()
       getdata()
-    
-
-  },[getcategory,getdata])
+  },[datacategory])
   return (
     <div>
         <div className=' min-h-full container mx-auto  flex     lg:flex-row  flex-col justify-center gap-x-[40]'>
@@ -55,7 +54,7 @@ export default function singleProduct({params:{id}}) {
 
           <h1 id="angka" className="mt-2 font-bold text-3xl tracking-wide border-t border-slate-300">Rp.{data.hargatotal}</h1>
           <div className="flex flex-row gap-x-2  mt-2 items-center">
-          <button onClick={decrement} className="text-xl font-extrabold ">-</button> <p className="text-xl">{counter}</p><button onClick={increment} className="text-xl font-extrabold">+</button> <Modal data={data} counter={counter}  />
+          <button onClick={decrement} className="text-xl font-extrabold ">-</button> <p className="text-xl">{counter}</p><button onClick={increment} className="text-xl font-extrabold">+</button> <Bodal data={data} counter={counter} />
           </div>
 
         </div>

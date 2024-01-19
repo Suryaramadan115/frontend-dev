@@ -30,7 +30,7 @@ export default function Editadmin({data}) {
                e.preventDefault()
 
             try {
-                const response = await axios.patch(`http://localhost:5000/product/${data.id}`,{
+                const response = await axios.patch(`https://apistore3000.vercel.app/product/${data.id}`,{
                       namaproduct : namaproduct,
                       category :category,
                       hargaawal : Number(hargaawal),

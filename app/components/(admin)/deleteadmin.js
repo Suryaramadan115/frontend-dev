@@ -10,7 +10,7 @@ export default function Deleteadmin({data}){
         setopen(!open)
     }
     const deletedata = async()=>{
-        const res = await axios.delete(`http://localhost:5000/product/${data.id}`)
+        const res = await axios.delete(`https://apistore3000.vercel.app/product/${data.id}`)
         alert(res.data.msg)
         window.location.reload()
     }

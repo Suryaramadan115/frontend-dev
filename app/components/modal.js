@@ -3,9 +3,9 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-export default function Modal({data,counter}) { 
+export default function Bodal({data,counter}) { 
     const {namaproduct,hargatotal,id} = data
-    const [open,setOpen] = useState(false)
+    const [open,setOpen] = useState()
     const [depan,setdepan] = useState("")
     const [belakang,setbelakang] = useState("")
 
@@ -38,12 +38,9 @@ export default function Modal({data,counter}) {
                 pos : pos 
 
             }
-            const result = await axios.post('http://localhost:5000/transaksi',parameter).then((data)=>{ console.log(data)}).catch((err)=>{
-                console.log("email sudah terdaftar")
-            })
-            
-            const res = await axios.post("/api/token",parameter)
-               await window.snap.pay(res.data.token)
+                const response = await axios.post('/api/token', parameter);
+                window.snap.pay(response.data.token)      
+              
             }
 
           useEffect(()=>{
@@ -58,10 +55,12 @@ export default function Modal({data,counter}) {
             }
           },[])
         
+        
 
   return (
     <div>
-        <div className="">
+        
+        <div>
             <button
             onClick={changeOpen}
             className='btn btn-primary'>
@@ -193,4 +192,5 @@ export default function Modal({data,counter}) {
         </div>
     </div>
   )
-}
+  }
+

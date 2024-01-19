@@ -17,43 +17,17 @@ export default function Kategory() {
     const [diskon,setDiskon] = useState([])
 
     const getdata = async ()=>{
-        const res = await axios.get('http://localhost:5000/diskon',{cache:"no-store"})
+        const res = await axios.get('https://apistore3000.vercel.app/diskon',{cache:"no-store"})
         setDiskon(res.data.result)
     } 
 
     useEffect(()=>{
             getdata()
 
-            let counter = 60
-            let counter1 = 24
-            let counter2 = 16
-
-
-
-            setInterval(() => {
-                    if(counter>0){
-                     counter = counter - 1
-                    }
-                    if(counter === 0){
-                            counter1 = counter1 -1
-                            counter = 60
-                    }
-                    if(counter1 === 0){
-                        counter2 = -1
-                        counter =60
-                    }
-           const style =  document.getElementById('counterElement').style.setProperty('--value', counter)
-            const style2 =   document.getElementById('counterElement1').style.setProperty('--value', counter1)
-             const style3 =  document.getElementById('counterElement2').style.setProperty('--value', counter2)
-
-
-            }, 1000)
-
-
     },[])
     
   return (
-    <div className='container mx-auto  h-full pt-[500px]'>
+    <div className='container mx-auto  h-full pt-[200px] lg:pt-[500px]'>
         <div className='  lg:h-[300px] h-[500px] container mx-auto p-5 rounded-2xl shadow-2xl border border-slate-200'>
         <h1 className='lg:text-2xl text-center capitalize font-rubik font-semibold  mb-6'>kategory pilihan</h1>
         <div className=' lg:flex-row flex flex-wrap  justify-center  items-center gap-x-2 w-full'>

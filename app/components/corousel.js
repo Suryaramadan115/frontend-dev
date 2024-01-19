@@ -30,7 +30,7 @@ const Carousel = () => {
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           } transition-opacity duration-500 ease-in-out`}
         >
-          <img src={item.image} alt={item.caption} className="w-full object-fill h-[400px]" />
+          <img src={item.image} alt={item.caption} className="w-full object-fill h-[200px] lg:h-[400px]" />
        
         </div>
       ))}

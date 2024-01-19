@@ -17,7 +17,7 @@ export default function  Category({params:{category}}) {
     const [data,setData] = useState([])
 
     const getdata = async()=>{
-        const res = await axios.get(`http://localhost:5000/category/${category}?limit=10`,{cache: "no-store"})
+        const res = await axios.get(`https://apistore3000.vercel.app/category/${category}?limit=10`,{cache: "no-store"})
         setData(res.data.data)
 
     }

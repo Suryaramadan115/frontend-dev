@@ -29,22 +29,22 @@ export default function Admin() {
         
 
             const getproduct = async()=>{
-                 const res = await axios.get(`http://localhost:5000/transaksi`,{cache:"no-store"})
+                 const res = await axios.get(`https://apistore3000.vercel.app/transaksi`,{cache:"no-store"})
 
              
                 setProduct(res.data.data)
          
             }
             const getcountproduct = async()=>{
-                const res = await axios.get('http://localhost:5000/product',{cache:"no-store"})
+                const res = await axios.get('https://apistore3000.vercel.app/product',{cache:"no-store"})
                 setcountProduct(res.data.totalrow)
             }
             const getcountcustomer = async()=>{
-                const res = await axios.get('http://localhost:5000/customer',{cache:"no-store"})
+                const res = await axios.get('https://apistore3000.vercel.app/customer',{cache:"no-store"})
                 setcountcustomer(res.data.totalrow)
             }
             const getcounttransaksi = async()=>{
-                const res = await axios.get('http://localhost:5000/transaksi',{cache:"no-store"})
+                const res = await axios.get('https://apistore3000.vercel.app/transaksi',{cache:"no-store"})
                 setcounttransaksi(res.data.totalrow)
             }
             const logoutin = async(e)=>{
