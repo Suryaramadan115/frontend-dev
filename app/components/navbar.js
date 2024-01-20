@@ -21,8 +21,8 @@ export default function Navbar() {
 
     const postsearch = async(e)=>{
         e.preventDefault()
-    const result = await dispatch(addkategori(query))
-    const res = await dispatch(addsearch(query))
+    const result = await dispatch(addkategori(query.toLocaleLowerCase()))
+    const res = await dispatch(addsearch(query.toLocaleLowerCase()))
     setquery("")
 
     }

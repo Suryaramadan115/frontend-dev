@@ -48,7 +48,7 @@ export default function Admincategory({params:{category}}) {
             
             const logout = async (e)=>{
                 e.preventDefault()
-                await signOut
+                await signOut()
             }
             useEffect(()=>{
                     getproduct()

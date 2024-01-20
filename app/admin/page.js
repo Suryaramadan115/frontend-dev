@@ -37,7 +37,7 @@ export default function Admin() {
 
         const pushdata =async (e)=>{
           e.preventDefault()
-          await dispatch(addsearch(search))
+          await dispatch(addsearch(search.toLowerCase()))
 
         }
 
