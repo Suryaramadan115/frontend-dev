@@ -45,7 +45,7 @@ export default function  Product() {
           
 
 
-    },[page,search,data,getdata])
+    },[page,search])
 
   return (
     <div className="min-h-screen lg:container lg:mx-auto flex flex-row lg:gap-x-36">

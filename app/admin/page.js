@@ -92,7 +92,7 @@ export default function Admin() {
                     if (status === 'unauthenticated')router.replace('/login')
 
 
-},[query,page,status,getproduct,router])
+},[query,page,status])
 
 
 
