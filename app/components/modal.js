@@ -148,9 +148,9 @@ export default function Bodal({data,counter}) {
                     
                 </div>
 
-                <div className="mt-4 ml-6">
+                <div className="mt-4 ml-0 lg:ml-6">
                      <h1> Product</h1>
-                    <div className="flex lg:flex-row lg:gap-3 gap-2 flex-col justify-center">
+                    <div className="flex lg:flex-row lg:gap-3 gap-2 flex-col lg:justify-center">
                         <input className="input w-full lg:w-[30%] 
                         border border-slate-300" placeholder="id"
                         value={id}
