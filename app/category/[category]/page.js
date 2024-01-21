@@ -28,7 +28,7 @@ export default function  Category({params:{category}}) {
     <div className="min-h-screen container mx-auto flex flex-row gap-x-28">
        <div className="space-y-5 mt-8 lg:w-[200px] border-r  border-slate-300 lg:block hidden">
        <h1 className="text-blue-800 lg:tracking-[2px] font-rubik text-xs lg:text-2xl font-semibold pl-1">
-          kategory <CiSearch  className='scale-100 inline-block ml-0 lg:ml-3 hover:cursor-pointer hover:text-blue-700'/>
+          kategory 
           </h1>
         <ul className=" px-4  lg:px-0 uppercase font-semibold text-slate-700 text-md font-mono  space-y-4 ">
           <li className="hover:text-blue-600 lg:pl-3 lg:text-lg text-xs"><Link href='/category/baju'> baju</Link></li>
