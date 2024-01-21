@@ -78,17 +78,17 @@ export default function Bodal({data,counter}) {
                 <div className="form-control">
                         <label className="text-xl">
                         </label>
-                        <input className="input border border-slate-400" 
+                        <input className="input border border-slate-400 w-full mx-auto" 
                          placeholder="masukan nama depan"
                          value={depan}
                          onChange={(e)=> setdepan(e.target.value)}
                          />
-                        <h3 className="text-xs font-serif text-slate-600 ">nama depan</h3>
+                        <h3 className="text-xs font-serif text-slate-600  ">nama depan</h3>
 
                 </div>
 
                     <div className="form-control ">
-                        <input className="input  border border-slate-400 "
+                        <input className="input  border border-slate-400 w-full mx-auto "
                          placeholder="masukan nama belakang"
                          value={belakang}
                          onChange={(e)=> setbelakang(e.target.value)}
@@ -150,18 +150,18 @@ export default function Bodal({data,counter}) {
 
                 <div className="mt-4 ml-6">
                      <h1> Product</h1>
-                    <div className="flex flex-row gap-x-3 justify-center">
-                        <input className="input w-[30%] 
+                    <div className="flex lg:flex-row lg:gap-3 gap-2 flex-col justify-center">
+                        <input className="input w-full lg:w-[30%] 
                         border border-slate-300" placeholder="id"
                         value={id}
                         onChange={(e)=> setId(e.target.value)}
                         />
-                        <input className="input w-[30%] border
+                        <input className="input w-full lg:w-[30%] border
                        border-slate-300"  placeholder="nama product"
                         value={namaproduct}
                          onChange={(e)=> setname(e.target.value)}
                        />
-                        <input className="input w-[20%] border
+                        <input className="input w-full lg:w-[20%] border
                          border-slate-300"  placeholder="price"
                          value={hargatotal}
                          onChange={(e)=> setprice(e.target.value)}
@@ -174,7 +174,7 @@ export default function Bodal({data,counter}) {
                     <div className="form-control flex flex-row items-center mt-4 ml-6 gap-x-3 ">
                     <h1 className="font-nunito font-extrabold text-md"> quantity:</h1> 
                     <input className=" input rounded-xl h-[25px] 
-                    border border-slate-400 w-[15%] " placeholder="QTY"
+                    border border-slate-400 lg:w-[15%] w-[30%] " placeholder="QTY"
                     value={counter}
                     onChange={(e)=> setquatity(e.target.value)}
                      />
