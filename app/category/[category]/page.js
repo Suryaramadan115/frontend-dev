@@ -26,7 +26,7 @@ export default function  Category({params:{category}}) {
     },[data,getdata])
   return (
     <div className="min-h-screen container mx-auto flex flex-row gap-x-28">
-       <div className="space-y-5 mt-8 lg:w-[200px] border-r  border-slate-300">
+       <div className="space-y-5 mt-8 lg:w-[200px] border-r  border-slate-300 lg:block hidden">
         <h1 className="text-blue-800 lg:tracking-[2px] font-rubik text-xs lg:text-2xl font-semibold pl-1">
           kategory <CiSearch  className='scale-100 inline-block ml-0 lg:ml-3 hover:cursor-pointer hover:text-blue-700'/>
           </h1>
@@ -40,10 +40,10 @@ export default function  Category({params:{category}}) {
 
         </ul>
       </div>
-      <div className=" -ml-[110px] lg:ml-0  pl-2 pt-3 lg:pl-0 lg:pt-3  w-[500px] lg:w-[800px] flex flex-wrap gap-2  lg:justify-center lg:gap-5 mt-8">
+      <div className="   pl-2 pt-3 lg:pl-0 lg:pt-3  w-[500px] lg:w-[800px] flex flex-wrap gap-2  lg:justify-center lg:gap-5 mt-8">
       {data.map((data)=>{
         return (
-          <div className="  card lg:w-[250px] w-[90px] bg-base-100 shadow-xl h-[350px] lg:h-[500px]"  key={data.id}>
+          <div className="  card lg:w-[250px] w-[120px] bg-base-100 shadow-xl h-[350px] lg:h-[500px]"  key={data.id}>
           <figure className="">
             <img src={data.url} alt="Shoes" className=" object-contain rounded-xl h-[150px] lg:h-[250px] w-full" />
           </figure>

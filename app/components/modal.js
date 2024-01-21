@@ -101,7 +101,7 @@ export default function Bodal({data,counter}) {
                 <div>
                     <h1 className="font-nunito pl-6 pt-2 font-extrabold text-md"> Phone Number : </h1> 
                     <div className="form-control ">
-                        <input className="input  border border-slate-400 w-[90%] mx-auto"
+                        <input className="input  border border-slate-400  mx-auto"
                          placeholder="phone number"
                          value={phone}
                          onChange={(e)=> setphone(e.target.value)}
@@ -113,7 +113,7 @@ export default function Bodal({data,counter}) {
                     <h1 className="font-nunito pl-6 pt-4 font-extrabold text-md"> Email :</h1> 
                     <div className="form-control ">
                         <input className="input  border border-slate-400
-                         w-[80%] mx-auto" placeholder="Email"
+                          mx-auto" placeholder="Email"
                          value={email}
                          onChange={(e)=> setemail(e.target.value)}
                          />
@@ -124,21 +124,21 @@ export default function Bodal({data,counter}) {
                     <h1 className="font-nunito pl-6 pt-4 font-extrabold text-md"> alamat:</h1> 
                     <div className="flex lg:flex-row flex-col justify-center w-full gap-3 items-center">
                     <div className="form-control ">
-                        <input className="input  border border-slate-400 w-[250px]
+                        <input className="input  border border-slate-400 w-full lg:w-[250px]
                          h-[100px] mx-auto" placeholder="alamat lengkap"
                          value={alamat}
                          onChange={(e)=> setalamat(e.target.value)}
                          />
                     </div>
                     <div className="form-control ">
-                        <input className="input  border border-slate-400 w-[100px]
+                        <input className="input  border border-slate-400 w-full lg:w-[100px]
                          h-[50px] mx-auto" placeholder="kota"
                          value={kota}
                          onChange={(e)=> setkota(e.target.value)}
                          />
                     </div>
                     <div className="form-control ">
-                        <input className="input  border border-slate-400 w-[100px]
+                        <input className="input  border border-slate-400 w-full lg:w-[100px]
                          h-[50px] mx-auto" placeholder="kode post"
                          value={pos}
                          onChange={(e)=> setpost(e.target.value)}

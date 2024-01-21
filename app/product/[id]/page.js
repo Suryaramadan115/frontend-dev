@@ -36,19 +36,19 @@ export default function SingleProduct({params:{id}}) {
   
     getcategory()
       getdata()
-  },[getcategory,getdata])
+  },[datacategory])
   return (
     <div>
-        <div className=' min-h-full container mx-auto  flex     lg:flex-row  flex-col justify-center gap-x-[40]'>
-        <div className=' mt-[40px] lg:mr-[100px] lg:p-0 p-5 '>
-            <img src={data.url} alt="gambar" className="w-full  h-[400px] rounded-lg "/>
+        <div className=' min-h-full container mx-auto  flex  lg:mt-10   lg:flex-row  flex-col justify-center gap-x-[40]'>
+        <div className=' flex justify-center  mt-[40px] lg:mr-[100px] lg:p-0 p-5 '>
+            <img src={data.url} alt="gambar" className="lg:w-full w-[200px] h-[200px]    lg:h-[400px] rounded-lg "/>
         </div>
-        <div className="flex w-[200px]  mt-[50px] flex-col lg:w-[500px] p-5 lg:p-0">
-          <h1 className="text-sm text-slate-500 font-rubik capitalize"><span className="lg:text-lg text-sm text-slate-600"> category:</span> {data.category}</h1>
+        <div className="flex flex-col lg:items-start items-center lg:w-[500px] w-full  p-5 lg:p-0">
+          <h1 className="text-sm text-slate-500 font-rubik capitalize "><span className="lg:text-lg text-sm text-slate-600"> category:</span> {data.category}</h1>
           <h2 className="text-slate-900 font-extrabold font-mono text-3xl capitalize">{data.namaproduct}</h2>
           <h3 className="text-md font-semibold text-slate-800 capitalize font-nunito pl-[5px]">stok :<span className="text-blue-700 font-bold text-sm"> {data.stok}</span></h3>
           <h1 className="font-rubik font-medium text-xl mt-[40px] tracking-[2px] capitalize">description :</h1>
-          <div className=" w-[550px]   lg:h-[200px] overflow-auto mt-[10px]">
+          <div className=" lg:w-[550px] w-[250px]    lg:h-[200px] overflow-auto mt-0  lg:mt-[10px]">
           <h1 className="lg:text-sm text-xs  font-serif    text-slate-600 capitalize ">{data.description} </h1>
           </div>
 
