@@ -43,7 +43,7 @@ export default function  Category({params:{category}}) {
       <div className="  pl-2 pt-3 lg:pl-0 lg:pt-3  w-[400px] lg:w-full flex flex-wrap gap-2  justify-center lg:gap-5 mt-8">
       {data.map((data)=>{
         return (
-          <div className="  card lg:w-[250px] w-[120px] bg-base-100 shadow-xl h-[350px] lg:h-[500px]"  key={data.id}>
+          <div className="  card lg:w-[250px] w-[100px] bg-base-100 shadow-xl h-[350px] lg:h-[500px]"  key={data.id}>
           <figure className="">
             <img src={data.url} alt="Shoes" className=" lg:object-contain rounded-xl h-[150px] lg:h-[250px] w-full" />
           </figure>
