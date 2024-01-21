@@ -40,7 +40,7 @@ export default function  Category({params:{category}}) {
 
         </ul>
       </div>
-      <div className="  pl-2 pt-3 lg:pl-0 lg:pt-3  w-[400px] lg:w-[800px] flex flex-wrap gap-2  justify-center lg:gap-5 mt-8">
+      <div className="  pl-2 pt-3 lg:pl-0 lg:pt-3  w-[400px] lg:w-full flex flex-wrap gap-2  justify-center lg:gap-5 mt-8">
       {data.map((data)=>{
         return (
           <div className="  card lg:w-[250px] w-[120px] bg-base-100 shadow-xl h-[350px] lg:h-[500px]"  key={data.id}>
